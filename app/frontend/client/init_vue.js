@@ -1,14 +1,14 @@
 import Vue from 'vue'
-import loadComponents from './load_components'
+import App from 'application/components/App'
 
 export default function() {
-  loadComponents()
-
   // Use plugin
   // Vue.use(VueRouter)
 
   document.addEventListener('DOMContentLoaded', () => {
     const el = document.querySelector('#vue-app')
+
+    Vue.component('App', App)
 
     /* eslint-disable no-new */
     new Vue({ el })

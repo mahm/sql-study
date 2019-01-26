@@ -29,5 +29,14 @@ module VueWebpack4RailsTemplate
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # タイムゾーンを日本に限定
+    config.time_zone = 'Tokyo'
+
+    # デフォルト言語を日本語に設定
+    config.i18n.default_locale = :ja
+
+    # lib以下をロード
+    config.paths.add 'lib', eager_load: true
   end
 end

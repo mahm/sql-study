@@ -1,0 +1,4 @@
+- flash.each do |name, msg|
+  - if %w(notice alert).include?(name)
+    :javascript
+      Toastify({ text: "#{msg}", duration: 3000 }).showToast()

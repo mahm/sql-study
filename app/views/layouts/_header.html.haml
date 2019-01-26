@@ -1,0 +1,22 @@
+%header
+  %nav.navbar.is-info{'aria-label': 'main navigation', role: 'navigation'}
+    .container
+      .navbar-brand
+        = link_to root_url, class: 'navbar-item' do
+          = application_name
+        %a.navbar-burger{style: 'color: white; ', 'aria-expanded': 'false', 'aria-label': 'menu', role: 'button', data: { target: 'navMenu' }}
+          %span{'aria-hidden': 'true'}
+          %span{'aria-hidden': 'true'}
+          %span{'aria-hidden': 'true'}
+      #navMenu.navbar-menu
+        .navbar-start
+          = link_to '#', class: 'navbar-item' do
+            %span.icon
+              %i.fa.fa-question
+            %span
+              このサイトは？
+          = link_to '#', class: 'navbar-item' do
+            %span.icon
+              %i.fa.fa-comment
+            %span
+              スキーマ

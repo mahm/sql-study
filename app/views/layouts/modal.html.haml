@@ -1,0 +1,9 @@
+.modal
+  .modal-background
+  .modal-card
+    %header.modal-card-head
+      %p.modal-card-title
+        - if content_for? :title
+          = yield :title
+      %button.delete.js-modal-close
+    = yield

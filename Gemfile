@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'bootsnap'
 gem 'rails', '5.2.2'
 
@@ -11,6 +12,7 @@ gem 'puma'
 gem 'webpacker', '4.0.0.pre.3'
 gem 'jb'
 gem 'hamlit-rails'
+gem 'seed-fu'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -25,7 +27,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen'
   gem 'spring-commands-rspec'
-  gem 'seed-fu'
 end
 
 group :test do
