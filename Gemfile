@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
-gem 'bootsnap'
 gem 'rails', '5.2.2'
+gem 'bootsnap'
 
 gem 'pg'
 gem 'puma'
