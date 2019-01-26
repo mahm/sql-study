@@ -1,0 +1,2 @@
+class ServiceChannel < ApplicationRecord
+end

@@ -25,6 +25,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen'
   gem 'spring-commands-rspec'
+  gem 'seed-fu'
 end
 
 group :test do
