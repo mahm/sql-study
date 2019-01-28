@@ -1,0 +1,38 @@
+<template>
+  <a class="navbar-item">
+    <div @click="openModal">
+      <span class="icon">
+        <i class="fa fa-comments"></i>
+      </span>
+      <span>
+        ER図
+      </span>
+    </div>
+    <b-modal :active.sync="isModalActive" :width="640">
+      <pre>
+        {{ body }}
+      </pre>
+    </b-modal>
+  </a>
+</template>
+
+<script>
+export default {
+  props: {
+    body: {
+      type: String,
+      default: null,
+    },
+  },
+  data() {
+    return {
+      isModalActive: false,
+    }
+  },
+  methods: {
+    openModal() {
+      this.isModalActive = true
+    },
+  },
+}
+</script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <codemirror v-model="code" :options="cmOptions"></codemirror>
+    <codemirror v-model="value" :options="cmOptions"></codemirror>
   </div>
 </template>
 
@@ -23,7 +23,6 @@ export default {
   },
   data () {
     return {
-      code: this.value,
       cmOptions: {
         tabSize: 2,
         mode: 'text/x-mysql',
@@ -34,7 +33,7 @@ export default {
     }
   },
   updated () {
-    this.$emit('input', this.code)
+    this.$emit('input', this.value)
   },
 }
 </script>

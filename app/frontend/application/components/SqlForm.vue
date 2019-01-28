@@ -11,6 +11,21 @@
       </div>
       <div class="level-right">
         <div class="level-item">
+          <b-select
+            v-model="selectedTableName"
+            placeholder="利用可能なテーブル一覧"
+            @input="changeTableName"
+          >
+            <option
+              v-for="tableName in tables"
+              :key="tableName"
+              :value="tableName"
+            >
+              {{ tableName }}
+            </option>
+          </b-select>
+        </div>
+        <div class="level-item">
           <button class="button is-primary is-large" :disabled="disabled" @click="submit">
             Run
           </button>
@@ -28,15 +43,17 @@ export default {
   components: {
     CodeEditor,
   },
-  data () {
+  data() {
     return {
       body: '',
       errorMessage: '',
       processing: false,
+      tables: ['', 'access_histories', 'books', 'categories', 'platforms', 'service_channels', 'service_users'],
+      selectedTableName: null,
     }
   },
   methods: {
-    submit () {
+    submit() {
       this.errorMessage = ''
       this.processing = true
       create({ body: this.body })
@@ -54,9 +71,20 @@ export default {
           this.processing = false
         })
     },
+    changeTableName() {
+      if (this.selectedTableName !== '') {
+        console.log('changeTableName')
+        this.body = `SELECT
+  *
+FROM
+  ${this.selectedTableName}
+;
+`
+      }
+    },
   },
   computed: {
-    disabled () {
+    disabled() {
       return (this.body === '' || this.processing)
     },
   },

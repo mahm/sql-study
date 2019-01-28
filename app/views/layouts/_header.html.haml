@@ -10,13 +10,5 @@
           %span{'aria-hidden': 'true'}
       #navMenu.navbar-menu
         .navbar-start
-          = link_to '#', class: 'navbar-item' do
-            %span.icon
-              %i.fa.fa-question
-            %span
-              このサイトは？
-          = link_to '#', class: 'navbar-item' do
-            %span.icon
-              %i.fa.fa-comment
-            %span
-              スキーマ
+          %about-site
+          %about-schema{ body: 'ここにER図を表示する' }

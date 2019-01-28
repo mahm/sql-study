@@ -6,4 +6,8 @@ module ApplicationHelper
   def google_analytics_code
     ENV.fetch('GOOGLE_ANALYTICS_CODE')
   end
+
+  def schema_body
+
+  end
 end
