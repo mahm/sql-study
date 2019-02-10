@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_26_024439) do
+ActiveRecord::Schema.define(version: 2019_02_10_042050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 2019_01_26_024439) do
     t.bigint "service_channel_id"
     t.bigint "book_id"
     t.datetime "accessed_at", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_access_histories_on_book_id"
     t.index ["service_channel_id"], name: "index_access_histories_on_service_channel_id"
     t.index ["service_user_id"], name: "index_access_histories_on_service_user_id"
@@ -30,34 +28,24 @@ ActiveRecord::Schema.define(version: 2019_01_26_024439) do
   create_table "books", force: :cascade do |t|
     t.string "name", null: false
     t.bigint "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_books_on_category_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "platforms", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "service_channels", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "service_users", force: :cascade do |t|
     t.bigint "platform_id"
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["platform_id"], name: "index_service_users_on_platform_id"
   end
 
