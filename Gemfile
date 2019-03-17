@@ -9,7 +9,7 @@ gem 'bootsnap'
 
 gem 'pg'
 gem 'puma'
-gem 'webpacker', '4.0.0.pre.3'
+gem 'webpacker', '4.0.2'
 gem 'jb'
 gem 'hamlit-rails'
 gem 'seed-fu'
