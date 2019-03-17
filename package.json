@@ -26,6 +26,7 @@
     "bulma-utilities": "^0.3.1",
     "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^1.0.1",
+    "file-loader": "^3.0.1",
     "humps": "^2.0.1",
     "lodash-es": "^4.17.11",
     "mini-css-extract-plugin": "^0.4.5",
@@ -52,9 +53,6 @@
     "webpacker-entry": "^0.1.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^4.0.9",
-    "@storybook/addon-viewport": "^4.0.8",
-    "@storybook/vue": "^4.0.8",
     "eslint": "^5.2.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-prettier": "^3.3.0",
@@ -63,10 +61,6 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-vue": "^5.0.0-beta.0",
     "prettier": "^1.15.2",
-    "storybook-addon-vue-info": "^0.7.0",
     "webpack-dev-server": "^3.1.10"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook -s app/frontend/stories"
   }
 }
