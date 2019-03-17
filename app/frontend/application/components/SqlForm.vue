@@ -73,7 +73,6 @@ export default {
     },
     changeTableName() {
       if (this.selectedTableName !== '') {
-        console.log('changeTableName')
         this.body = `SELECT
   *
 FROM
