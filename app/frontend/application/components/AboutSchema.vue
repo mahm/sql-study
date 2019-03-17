@@ -9,21 +9,13 @@
       </span>
     </div>
     <b-modal :active.sync="isModalActive" :width="640">
-      <pre>
-        {{ body }}
-      </pre>
+      <img class="image" src="~/images/er.png" />
     </b-modal>
   </a>
 </template>
 
 <script>
 export default {
-  props: {
-    body: {
-      type: String,
-      default: null,
-    },
-  },
   data() {
     return {
       isModalActive: false,
@@ -36,3 +28,8 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" scoped>
+.image
+  max-height: 100%
+</style>
