@@ -25,3 +25,9 @@ bin/rake db:create
 ```
 foreman start -f Profile.local
 ```
+
+## リリース
+
+```
+bin/rake db:seed_fu
+```

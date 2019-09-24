@@ -48,7 +48,7 @@ export default {
       body: '',
       errorMessage: '',
       processing: false,
-      tables: ['', 'access_histories', 'books', 'categories', 'platforms', 'service_channels', 'service_users'],
+      tables: ['', 'access_histories', 'books', 'categories', 'platforms', 'service_channels', 'service_users', 'entries'],
       selectedTableName: null,
     }
   },

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_10_042050) do
+ActiveRecord::Schema.define(version: 2019_09_24_012413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 2019_02_10_042050) do
     t.string "name", null: false
   end
 
+  create_table "entries", force: :cascade do |t|
+    t.bigint "service_user_id"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_user_id"], name: "index_entries_on_service_user_id"
+  end
+
   create_table "platforms", force: :cascade do |t|
     t.string "name", null: false
   end
@@ -53,5 +61,6 @@ ActiveRecord::Schema.define(version: 2019_02_10_042050) do
   add_foreign_key "access_histories", "service_channels"
   add_foreign_key "access_histories", "service_users"
   add_foreign_key "books", "categories"
+  add_foreign_key "entries", "service_users"
   add_foreign_key "service_users", "platforms"
 end
